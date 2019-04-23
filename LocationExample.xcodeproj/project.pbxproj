@@ -14,7 +14,7 @@
 		CE1ECBBE1E5244CF00F4A7C9 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1ECBBB1E5244CF00F4A7C9 /* XCTestCaseExtension.swift */; };
 		CE28931021415A1400815E92 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE28930F21415A1400815E92 /* RealmManager.swift */; };
 		CE48CC60212C3AB8001D77B2 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE48CC5F212C3AB8001D77B2 /* XCTestCaseExtension.swift */; };
-		CE58336C1F953A7C00D8CFF4 /* LoginViewControllerSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58336B1F953A7C00D8CFF4 /* LoginViewControllerSpecs.swift */; };
+		CE58336C1F953A7C00D8CFF4 /* MapViewControllerSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58336B1F953A7C00D8CFF4 /* MapViewControllerSpecs.swift */; };
 		CE59A83E1F445F7A00C2C798 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59A83D1F445F7A00C2C798 /* Location.swift */; };
 		CEA5E71F2142B080000DACAE /* CLLocationManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA5E71E2142B080000DACAE /* CLLocationManagerMock.swift */; };
 		CEB08BE11E044D840088E2D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB08BDF1E044D840088E2D0 /* LaunchScreen.storyboard */; };
@@ -23,7 +23,7 @@
 		CEE70A981F866C7E00037583 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE70A971F866C7E00037583 /* main.swift */; };
 		CEE70A9B1F866D5F00037583 /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE70A991F866CC900037583 /* TestingAppDelegate.swift */; };
 		CEFFF0551F3B36FB002C5870 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFFF0541F3B36FB002C5870 /* MapViewController.swift */; };
-		CEFFF0571F3B431F002C5870 /* LoginViewControllerFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFFF0561F3B431F002C5870 /* LoginViewControllerFeatures.swift */; };
+		CEFFF0571F3B431F002C5870 /* MapViewControllerFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFFF0561F3B431F002C5870 /* MapViewControllerFeatures.swift */; };
 		FE712C401FBCF1A900F9C060 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECCBFFD1DBA8FE600789698 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +67,7 @@
 		CE28930F21415A1400815E92 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RealmManager.swift; path = Library/RealmManager.swift; sourceTree = "<group>"; };
 		CE2E4B691DD62BBC007A86E6 /* LocationExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocationExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE48CC5F212C3AB8001D77B2 /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
-		CE58336B1F953A7C00D8CFF4 /* LoginViewControllerSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpecs.swift; sourceTree = "<group>"; };
+		CE58336B1F953A7C00D8CFF4 /* MapViewControllerSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerSpecs.swift; sourceTree = "<group>"; };
 		CE59A83D1F445F7A00C2C798 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Models/Location.swift; sourceTree = "<group>"; };
 		CEA5E71E2142B080000DACAE /* CLLocationManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationManagerMock.swift; sourceTree = "<group>"; };
 		CEB08BDF1E044D840088E2D0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Views/Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		CEE70A991F866CC900037583 /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		CEF83BC61E296C33004B4453 /* LocationExampleTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocationExampleTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		CEFFF0541F3B36FB002C5870 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Views/Controllers/MapViewController.swift; sourceTree = "<group>"; };
-		CEFFF0561F3B431F002C5870 /* LoginViewControllerFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerFeatures.swift; sourceTree = "<group>"; };
+		CEFFF0561F3B431F002C5870 /* MapViewControllerFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewControllerFeatures.swift; sourceTree = "<group>"; };
 		D6C8B4B5811A41907378FFD9 /* Pods-LocationExample.release dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationExample.release dev.xcconfig"; path = "Pods/Target Support Files/Pods-LocationExample/Pods-LocationExample.release dev.xcconfig"; sourceTree = "<group>"; };
 		DFEF19054E15F7A738F47E5B /* Pods_LocationExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocationExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7569DA6BE8086F5FC4B7739 /* Pods-LocationExample.debug dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationExample.debug dev.xcconfig"; path = "Pods/Target Support Files/Pods-LocationExample/Pods-LocationExample.debug dev.xcconfig"; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		CE48CC61212C3B03001D77B2 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				CE58336B1F953A7C00D8CFF4 /* LoginViewControllerSpecs.swift */,
+				CE58336B1F953A7C00D8CFF4 /* MapViewControllerSpecs.swift */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -158,7 +158,7 @@
 		CE48CC62212C3BDD001D77B2 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				CEFFF0561F3B431F002C5870 /* LoginViewControllerFeatures.swift */,
+				CEFFF0561F3B431F002C5870 /* MapViewControllerFeatures.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -567,7 +567,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEE70A9B1F866D5F00037583 /* TestingAppDelegate.swift in Sources */,
-				CEFFF0571F3B431F002C5870 /* LoginViewControllerFeatures.swift in Sources */,
+				CEFFF0571F3B431F002C5870 /* MapViewControllerFeatures.swift in Sources */,
 				CE1ECBBE1E5244CF00F4A7C9 /* XCTestCaseExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,7 +590,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA5E71F2142B080000DACAE /* CLLocationManagerMock.swift in Sources */,
-				CE58336C1F953A7C00D8CFF4 /* LoginViewControllerSpecs.swift in Sources */,
+				CE58336C1F953A7C00D8CFF4 /* MapViewControllerSpecs.swift in Sources */,
 				CE48CC60212C3AB8001D77B2 /* XCTestCaseExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
