@@ -1,0 +1,61 @@
+PODS:
+  - BuddyBuildSDK (1.0.17)
+  - KIF (3.7.6):
+    - KIF/Core (= 3.7.6)
+  - KIF/Core (3.7.6)
+  - Nimble (8.0.1)
+  - Nocilla (0.11.0)
+  - Quick (2.1.0)
+  - Realm (3.14.1):
+    - Realm/Headers (= 3.14.1)
+  - Realm/Headers (3.14.1)
+  - RealmSwift (3.14.1):
+    - Realm (= 3.14.1)
+  - SwiftLint (0.31.0)
+  - SwiftyBeaver (1.7.0)
+
+DEPENDENCIES:
+  - BuddyBuildSDK
+  - KIF
+  - Nimble
+  - "Nocilla (from `git@github.com:pcantrell/Nocilla.git`, branch `null-annotations`)"
+  - Quick
+  - RealmSwift
+  - SwiftLint
+  - SwiftyBeaver
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BuddyBuildSDK
+    - KIF
+    - Nimble
+    - Quick
+    - Realm
+    - RealmSwift
+    - SwiftLint
+    - SwiftyBeaver
+
+EXTERNAL SOURCES:
+  Nocilla:
+    :branch: null-annotations
+    :git: "git@github.com:pcantrell/Nocilla.git"
+
+CHECKOUT OPTIONS:
+  Nocilla:
+    :commit: 4793459646076a6ce66137133cc4cfe6e5b9543a
+    :git: "git@github.com:pcantrell/Nocilla.git"
+
+SPEC CHECKSUMS:
+  BuddyBuildSDK: 8ae12ee721098b356a961ea7dce70ae55f93a7d2
+  KIF: ae73fd36b1c860588841cb27e7f6efc4477122e2
+  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
+  Nocilla: 7af7a386071150cc8aa5da4da97d060f049dd61c
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
+  Realm: e12c9c2387d05c5bba3a9c394838f5870e85763b
+  RealmSwift: a82eab9b04c3e1616082c7e17aa300740847769c
+  SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
+  SwiftyBeaver: 4cc0080d2e23f980652e28978db11a5c9da39165
+
+PODFILE CHECKSUM: 358b7d2d615b554b73fbc87e1fdf34c77f08884b
+
+COCOAPODS: 1.5.3

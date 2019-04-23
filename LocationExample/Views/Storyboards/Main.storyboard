@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lvn-PI-8fL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="SzH-Cj-DVn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Lvn-PI-8fL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bU1-5Y-tP0">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Mb-Uu-ary">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="UXB-mm-MYE" kind="relationship" relationship="rootViewController" id="Pk8-5i-gIc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ZE-n3-glj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="107"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="Gjn-BH-gr3">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UXB-mm-MYE" customClass="MapViewController" customModule="LocationExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rtl-OZ-LGD"/>
+                        <viewControllerLayoutGuide type="bottom" id="AKp-Vy-mxd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fsz-Zh-KNp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qth-7X-FKN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <accessibility key="accessibilityConfiguration" label="Map View">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                        <gestureRecognizers/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KQH-kK-emn"/>
+                    <connections>
+                        <outlet property="mapView" destination="qth-7X-FKN" id="RsS-gx-iHE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JnB-fD-Usu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949.60000000000002" y="106.59670164917542"/>
+        </scene>
+    </scenes>
+</document>
