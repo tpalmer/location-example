@@ -14,7 +14,7 @@
 		CE28931021415A1400815E92 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE28930F21415A1400815E92 /* RealmManager.swift */; };
 		CE48CC60212C3AB8001D77B2 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE48CC5F212C3AB8001D77B2 /* XCTestCaseExtension.swift */; };
 		CE58336C1F953A7C00D8CFF4 /* LoginViewControllerSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58336B1F953A7C00D8CFF4 /* LoginViewControllerSpecs.swift */; };
-		CE59A83E1F445F7A00C2C798 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59A83D1F445F7A00C2C798 /* User.swift */; };
+		CE59A83E1F445F7A00C2C798 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59A83D1F445F7A00C2C798 /* Location.swift */; };
 		CEA5E71F2142B080000DACAE /* CLLocationManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA5E71E2142B080000DACAE /* CLLocationManagerMock.swift */; };
 		CEB08BE11E044D840088E2D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB08BDF1E044D840088E2D0 /* LaunchScreen.storyboard */; };
 		CEB08BE21E044D840088E2D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB08BE01E044D840088E2D0 /* Main.storyboard */; };
@@ -66,7 +66,7 @@
 		CE2E4B691DD62BBC007A86E6 /* LocationExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocationExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE48CC5F212C3AB8001D77B2 /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
 		CE58336B1F953A7C00D8CFF4 /* LoginViewControllerSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpecs.swift; sourceTree = "<group>"; };
-		CE59A83D1F445F7A00C2C798 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
+		CE59A83D1F445F7A00C2C798 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Models/Location.swift; sourceTree = "<group>"; };
 		CEA5E71E2142B080000DACAE /* CLLocationManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationManagerMock.swift; sourceTree = "<group>"; };
 		CEB08BDF1E044D840088E2D0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Views/Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEB08BE01E044D840088E2D0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Views/Storyboards/Main.storyboard; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 		CE1BE42F1DBA993700DD6C44 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CE59A83D1F445F7A00C2C798 /* User.swift */,
+				CE59A83D1F445F7A00C2C798 /* Location.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -571,7 +571,7 @@
 				CE28931021415A1400815E92 /* RealmManager.swift in Sources */,
 				CEE70A981F866C7E00037583 /* main.swift in Sources */,
 				CECCBFF71DBA8FE600789698 /* AppDelegate.swift in Sources */,
-				CE59A83E1F445F7A00C2C798 /* User.swift in Sources */,
+				CE59A83E1F445F7A00C2C798 /* Location.swift in Sources */,
 				CEFFF0551F3B36FB002C5870 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

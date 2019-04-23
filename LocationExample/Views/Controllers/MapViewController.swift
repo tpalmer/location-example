@@ -9,24 +9,87 @@
 import RealmSwift
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet var mapView: MKMapView!
+    var locationManager = CLLocationManager()
+    var locationStatus = "Not Determined"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        let centerCoordinate = CLLocationCoordinate2DMake(
-//            Double(reading.latitude) ?? 0.0,
-//            Double(reading.longitude) ?? 0.0
-//        )
-//        let region = MKCoordinateRegion(
-//            center: centerCoordinate,
-//            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-//        )
-//        let locationPin = MKPointAnnotation()
-//        locationPin.coordinate = centerCoordinate
-//        self.mapView.addAnnotation(locationPin)
-//        self.mapView.setRegion(region, animated: true)
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+
+        // TODO: Capture location in background
+
+        // TODO: Tapping a pin displays address via reverse-geolocation
+
     }
+
+    func updateLocationPins() {
+        let locations = RealmManager.instance().objects(Location.self)
+        for location in locations {
+            let coordinate = CLLocationCoordinate2DMake(
+                Double(location.latitude) ?? 0.0,
+                Double(location.longitude) ?? 0.0
+            )
+
+            let locationPin = MKPointAnnotation()
+            locationPin.coordinate = coordinate
+
+            self.mapView.addAnnotation(locationPin)
+        }
+    }
+
+    // MARK: CLLocationManager delegate methods START
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let clLocation = locations.last else {
+            return
+        }
+
+        let location = Location()
+        let coordinate = clLocation.coordinate
+        location.latitude = String(coordinate.latitude)
+        location.longitude = String(coordinate.longitude)
+
+        logger.debug("Saving location: \(location)")
+
+        RealmManager.write {
+            RealmManager.instance().add(location)
+        }
+
+        self.updateLocationPins()
+    }
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+
+        var allowed = false
+
+        switch status {
+        case CLAuthorizationStatus.restricted:
+            locationStatus = "Restricted access to location"
+        case CLAuthorizationStatus.denied:
+            locationStatus = "User denied access to location"
+        case CLAuthorizationStatus.notDetermined:
+            locationStatus = "Status not determined"
+        default:
+            locationStatus = "Allowed to location Access"
+            allowed = true
+        }
+        if allowed {
+            logger.info(locationStatus)
+            locationManager.startUpdatingLocation()
+        } else {
+            logger.error("Denied location access: \(locationStatus)")
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        logger.error("Error updating location: \(error)")
+    }
+
+    // MARK: CLLocationManager delegate methods END
 }
