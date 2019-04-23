@@ -8,6 +8,7 @@
 
 import RealmSwift
 import MapKit
+import Contacts
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
@@ -18,14 +19,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        mapView.delegate = self
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
 
         // TODO: Capture location in background
-
-        // TODO: Tapping a pin displays address via reverse-geolocation
-
     }
 
     func updateLocationPins() {
@@ -38,6 +37,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
             let locationPin = MKPointAnnotation()
             locationPin.coordinate = coordinate
+            locationPin.title = location.address
 
             self.mapView.addAnnotation(locationPin)
         }
@@ -55,9 +55,32 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         location.latitude = String(coordinate.latitude)
         location.longitude = String(coordinate.longitude)
 
-        logger.debug("Saving location: \(location)")
+        clLocation.reverseGeocode { placemark, error in
+            guard error == nil else {
+                logger.error("CLError:", error?.localizedDescription ?? "")
+                return
+            }
+            guard let placemark = placemark?.first else {
+                logger.error("Unable to find placemark")
+                return
+            }
+
+            let formatter = CNPostalAddressFormatter()
+            formatter.style = .mailingAddress
+            let mailingAddress = formatter.string(from: placemark.postalAddress ?? CNPostalAddress())
+
+            DispatchQueue.main.async {
+                RealmManager.write {
+                    location.address = mailingAddress.replacingOccurrences(of: "\n", with: " ")
+                }
+
+                logger.debug("Updated location address: \(location)")
+                self.updateLocationPins()
+            }
+        }
 
         RealmManager.write {
+            logger.debug("Saving location: \(location)")
             RealmManager.instance().add(location)
         }
 
@@ -76,7 +99,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         case CLAuthorizationStatus.notDetermined:
             locationStatus = "Status not determined"
         default:
-            locationStatus = "Allowed to location Access"
+            locationStatus = "Allowed to access location"
             allowed = true
         }
         if allowed {
@@ -92,4 +115,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
 
     // MARK: CLLocationManager delegate methods END
+
+    // MARK: MKMapView delegate methods START
+
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "annotationView")
+        annotationView.canShowCallout = true
+
+        return annotationView
+    }
+
+    // MARK: MKMapView delegate methods END
 }

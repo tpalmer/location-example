@@ -13,4 +13,5 @@ import CoreLocation
 class Location: Object {
     @objc dynamic var latitude = ""
     @objc dynamic var longitude = ""
+    @objc dynamic var address = ""
 }

@@ -15,7 +15,7 @@ let logger = SwiftyBeaver.self
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     @objc var window: UIWindow?
-    let currentSchemaVersion: UInt64 = 10
+    let currentSchemaVersion: UInt64 = 1
 
     func application(
         _ application: UIApplication,

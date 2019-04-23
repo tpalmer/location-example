@@ -10,6 +10,7 @@
 		93499E13E2BCFD617AD6ED9D /* Pods_LocationExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFEF19054E15F7A738F47E5B /* Pods_LocationExample.framework */; };
 		9935239B245D5B0F3968EB05 /* Pods_LocationExampleFeatures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6C3E2003311DC44410F7CA /* Pods_LocationExampleFeatures.framework */; };
 		A22F2DDFEEEF5ED3B80F2E0C /* Pods_LocationExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E189E363381AB431C35D8A /* Pods_LocationExampleTests.framework */; };
+		CE0DF1C8226F80E800CE034B /* CLLocation+ReverseGeocode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0DF1C7226F80E800CE034B /* CLLocation+ReverseGeocode.swift */; };
 		CE1ECBBE1E5244CF00F4A7C9 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1ECBBB1E5244CF00F4A7C9 /* XCTestCaseExtension.swift */; };
 		CE28931021415A1400815E92 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE28930F21415A1400815E92 /* RealmManager.swift */; };
 		CE48CC60212C3AB8001D77B2 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE48CC5F212C3AB8001D77B2 /* XCTestCaseExtension.swift */; };
@@ -58,6 +59,7 @@
 		BDCFD81CD8CFE762AE814526 /* Pods-LocationExampleFeatures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationExampleFeatures.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocationExampleFeatures/Pods-LocationExampleFeatures.release.xcconfig"; sourceTree = "<group>"; };
 		C11E36F72A29AB21CABDF6D2 /* Pods-LocationExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocationExample/Pods-LocationExample.release.xcconfig"; sourceTree = "<group>"; };
 		CB5BAFAD541CB8C0C2D485B7 /* Pods-LocationExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocationExampleTests/Pods-LocationExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE0DF1C7226F80E800CE034B /* CLLocation+ReverseGeocode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CLLocation+ReverseGeocode.swift"; path = "Library/CLLocation+ReverseGeocode.swift"; sourceTree = "<group>"; };
 		CE1ECBAA1E52443B00F4A7C9 /* LocationExampleFeatures.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationExampleFeatures.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1ECBAE1E52443B00F4A7C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE1ECBB81E5244CE00F4A7C9 /* LocationExampleFeatures-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocationExampleFeatures-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		CEB08BE31E04504C0088E2D0 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				CE0DF1C7226F80E800CE034B /* CLLocation+ReverseGeocode.swift */,
 				CE28930F21415A1400815E92 /* RealmManager.swift */,
 			);
 			name = Library;
@@ -573,6 +576,7 @@
 				CECCBFF71DBA8FE600789698 /* AppDelegate.swift in Sources */,
 				CE59A83E1F445F7A00C2C798 /* Location.swift in Sources */,
 				CEFFF0551F3B36FB002C5870 /* MapViewController.swift in Sources */,
+				CE0DF1C8226F80E800CE034B /* CLLocation+ReverseGeocode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
