@@ -21,10 +21,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
         mapView.delegate = self
         locationManager.delegate = self
+        locationManager.allowsBackgroundLocationUpdates = true
+        locationManager.pausesLocationUpdatesAutomatically = false
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
-
-        // TODO: Capture location in background
     }
 
     func updateLocationPins() {
