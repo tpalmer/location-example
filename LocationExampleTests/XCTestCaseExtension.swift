@@ -26,5 +26,6 @@ extension XCTestCase {
 
     func defineGlobalStubs () {
         stubRequest("GET", "https://static.realm.io".regex())
+        stubRequest("GET", "https://api.mixpanel.com".regex())
     }
 }

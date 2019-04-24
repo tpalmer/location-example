@@ -24,6 +24,7 @@
 		CEE70A9B1F866D5F00037583 /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE70A991F866CC900037583 /* TestingAppDelegate.swift */; };
 		CEFFF0551F3B36FB002C5870 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFFF0541F3B36FB002C5870 /* MapViewController.swift */; };
 		CEFFF0571F3B431F002C5870 /* MapViewControllerFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFFF0561F3B431F002C5870 /* MapViewControllerFeatures.swift */; };
+		CEFFF1DB22708B3B00A8069E /* CLLocationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFFF1DA22708B3B00A8069E /* CLLocationMock.swift */; };
 		FE712C401FBCF1A900F9C060 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECCBFFD1DBA8FE600789698 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		CEF83BC61E296C33004B4453 /* LocationExampleTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocationExampleTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		CEFFF0541F3B36FB002C5870 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Views/Controllers/MapViewController.swift; sourceTree = "<group>"; };
 		CEFFF0561F3B431F002C5870 /* MapViewControllerFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewControllerFeatures.swift; sourceTree = "<group>"; };
+		CEFFF1DA22708B3B00A8069E /* CLLocationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationMock.swift; sourceTree = "<group>"; };
 		D6C8B4B5811A41907378FFD9 /* Pods-LocationExample.release dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationExample.release dev.xcconfig"; path = "Pods/Target Support Files/Pods-LocationExample/Pods-LocationExample.release dev.xcconfig"; sourceTree = "<group>"; };
 		DFEF19054E15F7A738F47E5B /* Pods_LocationExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocationExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7569DA6BE8086F5FC4B7739 /* Pods-LocationExample.debug dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationExample.debug dev.xcconfig"; path = "Pods/Target Support Files/Pods-LocationExample/Pods-LocationExample.debug dev.xcconfig"; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				CEA5E71E2142B080000DACAE /* CLLocationManagerMock.swift */,
+				CEFFF1DA22708B3B00A8069E /* CLLocationMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA5E71F2142B080000DACAE /* CLLocationManagerMock.swift in Sources */,
+				CEFFF1DB22708B3B00A8069E /* CLLocationMock.swift in Sources */,
 				CE58336C1F953A7C00D8CFF4 /* MapViewControllerSpecs.swift in Sources */,
 				CE48CC60212C3AB8001D77B2 /* XCTestCaseExtension.swift in Sources */,
 			);

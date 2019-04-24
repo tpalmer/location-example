@@ -68,5 +68,71 @@ class MapViewControllerSpecs: QuickSpec {
                 expect(locationManagerMock.requestAlwaysAuthorizationCallCount).to(equal(1))
             }
         }
+
+        describe("updateLocationPins") {
+            beforeEach {
+                let location1 = Location(value: [
+                    "latitude": "12",
+                    "longitude": "40"
+                ])
+                let location2 = Location(value: [
+                    "latitude": "42",
+                    "longitude": "60"
+                ])
+                let location3 = Location(value: [
+                    "latitude": "10",
+                    "longitude": "60"
+                ])
+
+                RealmManager.write {
+                    RealmManager.instance().add(location1)
+                    RealmManager.instance().add(location2)
+                    RealmManager.instance().add(location3)
+                }
+            }
+
+            it("adds annotations to the mapView") {
+                mapVC.updateLocationPins()
+
+                expect(mapVC.mapView.annotations.count).to(equal(3))
+            }
+        }
+
+        context("CLLocationManager delegate methods") {
+            describe("locationManagerDidUpdateLocations") {
+                it("reverse geocodes the passed in location addresses") {
+                    let clLocation = CLLocationMock(latitude: 37.33233141, longitude: -122.0312186)
+                    mapVC.locationManager(mapVC.locationManager, didUpdateLocations: [clLocation])
+
+                    expect(clLocation.reverseGeocodeCallCount).to(equal(1))
+                }
+            }
+
+            describe("locationManagerDidChangeAuthorization") {
+                it("calls startUpdatingLocation if authorized") {
+                    let locationManagerMock = CLLocationManagerMock()
+                    mapVC.locationManager = locationManagerMock
+
+                    mapVC.locationManager(
+                        mapVC.locationManager,
+                        didChangeAuthorization: CLAuthorizationStatus.authorizedAlways
+                    )
+
+                    expect(locationManagerMock.startUpdatingLocationCallCount).to(equal(1))
+                }
+
+                it ("does nothing if not authorized") {
+                    let locationManagerMock = CLLocationManagerMock()
+                    mapVC.locationManager = locationManagerMock
+
+                    mapVC.locationManager(
+                        mapVC.locationManager,
+                        didChangeAuthorization: CLAuthorizationStatus.denied
+                    )
+
+                    expect(locationManagerMock.startUpdatingLocationCallCount).to(equal(0))
+                }
+            }
+        }
     }
 }

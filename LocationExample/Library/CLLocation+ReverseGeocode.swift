@@ -10,7 +10,8 @@ import Foundation
 import CoreLocation
 
 extension CLLocation {
-    func reverseGeocode(
+    // This weird method signature is so we can override it when testing.
+    @objc open func reverseGeocode(
         completion: @escaping (_ placemark: [CLPlacemark]?,
         _ error: Error?) -> Void) {
 

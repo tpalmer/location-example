@@ -12,6 +12,7 @@ import CoreLocation
 class CLLocationManagerMock: CLLocationManager {
     var requestAlwaysAuthorizationCallCount = 0
     var requestWhenInUseAuthorizationCallCount = 0
+    var startUpdatingLocationCallCount = 0
 
     override func requestAlwaysAuthorization() {
         self.requestAlwaysAuthorizationCallCount += 1
@@ -19,5 +20,9 @@ class CLLocationManagerMock: CLLocationManager {
 
     override func requestWhenInUseAuthorization() {
         self.requestWhenInUseAuthorizationCallCount += 1
+    }
+
+    override func startUpdatingLocation() {
+        self.startUpdatingLocationCallCount += 1
     }
 }
